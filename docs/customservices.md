@@ -33,6 +33,7 @@ within Homer:
   - [SABnzbd](#sabnzbd)
   - [OctoPrint](#sabnzbd)
   - [Tdarr](#tdarr)
+  - [Traefik](#traefik)
 
 If you experiencing any issue, please have a look to the [troubleshooting](troubleshooting.md) page.
 
@@ -404,4 +405,19 @@ for transcoding on your Tdarr instance as well as the number of errored items.
   url: "http://192.168.0.151:8265"
   type: "Tdarr"
   checkInterval: 5000 # (Optional) Interval (in ms) for updating the queue & error counts
+```
+
+## Traefik
+
+The Traefik service display information relating to the number of entrypoints,
+routers, middlewares & services configured on your Traefik instance including, if any, 
+the number of errors & warnings.
+
+```yaml
+- name: "Traefik"
+  logo: "assets/tools/sample.png"
+  url: "http://192.168.0.151:8080"
+  type: "Traefik"
+  displayCount: true # (Optional) Display count of entrypoints, routers, middlewares & services. 
+  updateInterval: 5000 # (Optional) Interval (in ms) for updating counts
 ```

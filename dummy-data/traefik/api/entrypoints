@@ -1,0 +1,42 @@
+[
+    {
+        "name": "ssh",
+        "address": ":22",
+        "transport":{
+            "lifeCycle": {
+                "graceTimeOut": "10s"
+            },
+            "respondingTimeouts": {
+                "idleTimeout": "3m0s"
+            }
+        },
+        "forwardedHeaders": {},
+        "http": {},
+        "http2": {
+            "maxConcurrentStreams": 250
+        },
+        "udp": {
+            "timeout": "3s"
+        }
+    },
+    {
+        "name": "web-secure",
+        "address": ":443",
+        "transport": {
+            "lifeCycle": {
+                "graceTimeOut": "10s"
+            },
+            "respondingTimeouts": {
+                "idleTimeout": "3m0s"
+            }
+        },
+        "forwardedHeaders": {},
+        "http": {},
+        "http2": {
+            "maxConcurrentStreams": 250
+        },
+        "udp": {
+            "timeout": "3s"
+        }
+    }
+]
