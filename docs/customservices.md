@@ -418,6 +418,8 @@ the number of errors & warnings.
   logo: "assets/tools/sample.png"
   url: "http://192.168.0.151:8080"
   type: "Traefik"
-  displayCount: true # (Optional) Display count of entrypoints, routers, middlewares & services. 
+  includeComponents: routers,middlewares,services
+  includeProtocols: http,tcp,udp
+  overview: true # (Optional) Display overview of routers, middlewares & services. 
   updateInterval: 5000 # (Optional) Interval (in ms) for updating counts
 ```
